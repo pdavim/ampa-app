@@ -1,0 +1,74 @@
+<h1>Models Main</h1>
+
+<section id="content">
+<div class="container">
+  <div class="section">
+
+    <p class="caption">Tables are a nice way to organize a lot of data. We provide a few utility classes to help you style your table as easily as possible. In addition, to improve mobile experience, all tables on mobile-screen widths are centered automatically.</p>
+    <div class="divider"></div>
+
+    <!--DataTables example Row grouping-->
+    <div id="table-datatables">
+      <h4 class="header">Listing</h4>
+      <div class="row">
+
+        <div class="col s12 m12 l12">
+          <table id="data-table-simple" class="responsive-table" cellspacing="0">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Agency</th>
+              </tr>
+            </thead>
+
+            <tfoot>
+              <tr>
+                <tr>
+                  <th>First Name</th>
+                  <th>Middle Name</th>
+                  <th>Last Name</th>
+                  <th>Age</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Gender</th>
+                  <th>Agency</th>
+                </tr>
+            </tfoot>
+
+            <tbody>
+
+
+              <?php
+
+
+while ($casting_form = mysqli_fetch_assoc($listmodels)) {
+echo '<tr>';
+
+echo '<td>'.$casting_form['Mfirst_name'].'</td>';
+echo '<td>'.$casting_form['Mmiddle_name'].'</td>';
+echo '<td>'.$casting_form['Mlast_name'].'</td>';
+echo '<td>'.$casting_form['Mage'].'</td>';
+echo '<td>'.$casting_form['Mphone'].'</td>';
+echo '<td>'.$casting_form['Memail'].'</td>';
+echo '<td>'.$casting_form['gender'].'</td>';
+echo '<td>'.$casting_form['agency'].'</td>';
+
+echo '</tr>';
+} //end while
+
+?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<div class="divider"></div>
+</section>

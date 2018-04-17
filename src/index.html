@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html ng-app="ampaapp">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="AMPA is a Audiovisual, Multimedia and Arts Production Manager. ">
+    <meta name="keywords" content="production office, team manager, production manager">
+    <title>AMPA</title>
+    <!-- Stylesheets -->
+    <link href="./css/photon.min.css" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/css/uikit.min.css" rel="stylesheet">
+    <!--XEL Style-->
+    <link href="../node_modules/xel/stylesheets/macos.theme.css" rel="stylesheet">
+    <link href="../node_modules/xel/stylesheets/material.theme.css" rel="stylesheet">
+    <link href="../node_modules/xel/stylesheets/vanilla.theme.css" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+
+-->
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+     <!-- Custome CSS-->
+     <link href="css/custom/custom-style.css" type="text/css" rel="stylesheet" media="screen,projection">
+     <link href="./views/css_views/clock.css" rel="stylesheet">
+
+       <link href="js/plugins/dropify/css/dropify.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+    <!-- Javascript -->
+    <style type="text/css">
+
+
+
+    .uk-active {
+      color: black;
+      font-weight: bold;
+    }
+
+    .titleTextBold {
+      color : primary;
+      font-weight : bold;
+      font-size: 250%;
+    }
+
+    .titleTextNormal {
+      color: black;
+      font-weight: regular;
+      font-size: 120%;
+
+    }
+
+    .uk-parent {
+
+      font-weight: regular;
+      font-size: 120%;
+      uk-active: blue;
+}
+
+    </style>
+
+
+
+</head>
+
+<body  onload="startTime()" >
+
+  <div class="window">
+    <div class="window-content">
+      <div class="pane-group">
+        <div class="pane-sm sidebar ">
+<!--SideBar Content Start-->
+<div>
+<div class="uk-nav uk-nav-default uk-padding-small">
+
+        <div class="uk-padding-small">
+
+            <span class="titleTextNormal">PRODUCTION</span>
+
+            <br>
+            <span class="titleTextBold "><strong class="uk-text-primary">MANAGER</strong></span>
+              <div class="uk-heading-divider">
+
+              </div>
+
+                      <div class="uk-grid-small uk-flex-middle " uk-grid>
+                          <div class="uk-width-auto uk-align-center uk-margin-remove-bottom uk-margin-small-top">
+                              <img class="uk-border-circle " width="60" height="60" src="./assets/img/avatar.jpg">
+                          </div>
+
+
+                          <div class="uk-width-auto uk-align-center uk-margin-remove-bottom uk-margin-small-top ">
+
+                              <h5 class="uk-card-title uk-margin-remove-bottom uk-margin-remove-top">Pedro Davim</h5>
+
+
+                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+                                <div id="Mytime"></div>
+
+                          </div>
+                      </div>
+
+
+            </div>
+
+
+
+
+            <div class="uk-nav-divider">
+            </div>
+
+
+
+
+<div class=" uk-padding-small">
+              <a class="uk-parent uk-active"  href="#!/">
+                <span class="fas fa-tachometer-alt uk-margin-small-right"></span>
+                <span >Dashboard</span>
+              </a>
+</div>
+<div class="uk-nav-divider "></div>
+<br>
+<div class="">
+              <a class="uk-parent uk-padding-small " href="#!/models">
+                <span class="fas fa-users uk-margin-small-right"></span>
+                Models List
+              </a>
+              <br>
+                <a class="uk-parent uk-padding-small" href="#!/add_model">
+                <span class="fas fa-user-plus uk-margin-small-right"></span>
+                Add Model
+              </a>
+</div>
+              <div class="uk-padding-small"></div>
+              <hr >
+              <div class="uk-padding-small"></div>
+<div class="">
+              <a class="uk-parent uk-padding-small " href="#!/location">
+                <span class="fas fa-globe uk-margin-small-right"></span>
+                <span>Locations</span>
+              </a>
+              <br>
+                <a class="uk-parent uk-padding-small" href="#!/add_location">
+                <span class="fas fa-user-plus uk-margin-small-right"></span>
+                Add Location
+              </a>
+  </div>
+  <div class="uk-padding-small"></div>
+  <hr >
+  <div class="uk-padding-small"></div>
+              <br>
+              <a class="uk-parent uk-padding-small" href="#!/props">
+                <span class="fas fa-boxes uk-margin-small-right"></span>
+              <span> Props</span>
+            </a>
+            <br>
+              <a class="uk-parent uk-padding-small" href="#!/gearstudio">
+                <span class="fas fa-warehouse uk-margin-small-right"></span>
+                <span>Studio</span>
+              </a>
+              <br>
+              <a class="uk-parent uk-padding-small" href="#!/gearstudio">
+                <span class="fas fa-warehouse uk-margin-small-right"></span>
+                <span>Equipment</span>
+              </a>
+              <br>
+              <a class="uk-parent uk-padding-small" href="#!/contacts">
+                <span class="fas fa-address-card uk-margin-small-right"></span>
+              <span>Contacts</span>
+            </a>
+            <br>
+            <a class="uk-parent uk-padding-small" href="#!/contacts">
+              <span class="fas fa-address-card uk-margin-small-right"></span>
+            <span>Bugets</span>
+          </a>
+          <br>
+          <a class="uk-parent uk-padding-small" href="#!/contacts">
+            <span class="fas fa-address-card uk-margin-small-right"></span>
+          <span>Projects</span>
+        </a>
+
+
+            </div>
+            <br/>
+            <hr/ class="uk-nav-divider">
+              </div>
+<!--SideBar Content End-->
+        </div>
+
+        <div class="pane uk-container-large uk-padding-small">
+  <!--Content Here Start-->
+
+
+
+
+<div onload="startTime()" class="ng-view"></div>
+
+    <!--Content Here End-->
+        </div>
+
+
+
+
+      </div>
+    </div>
+    </div>
+
+
+
+<!--Scrpts-->
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-route/angular-route.js"></script>
+
+<!-- jQuery Library -->
+<!--<script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>-->
+<!-- jQuery Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<!--fontawesome Library--->
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+
+<!--UIKIT Library--->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit-icons.min.js"></script>
+
+<!--XEL Library--->
+<script src="../node_modules/xel/xel.min.js"></script>
+
+
+<!--materialize js-->
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+
+<!--scrollbar-->
+<script type="text/javascript" src="./js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+
+<!-- chartist -->
+
+<!-- chartjs -->
+<script type="text/javascript" src="./js/plugins/chartjs/chart.min.js"></script>
+<script type="text/javascript" src="./js/plugins/chartjs/chart-script.js"></script>
+
+<!-- Calendar Script -->
+<script type="text/javascript" src="./js/plugins/fullcalendar/lib/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="./js/plugins/fullcalendar/lib/moment.min.js"></script>
+<script type="text/javascript" src="./js/plugins/fullcalendar/js/fullcalendar.min.js"></script>
+<script type="text/javascript" src="./js/plugins/fullcalendar/fullcalendar-script.js"></script>
+
+
+<!-- sparkline -->
+<script type="text/javascript" src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="../node_modules/jquery-sparkline/jquery.sparkline.js"></script>
+
+<!--google map-->
+<script type="text/javascript" src="./js/plugins/google-map/google-map-script.js"></script>
+<!-- google map api -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAZnaZBXLqNBRXjd-82km_NO7GUItyKek"></script>
+
+<!--jvectormap-->
+<script type="text/javascript" src="./js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script type="text/javascript" src="./js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script type="text/javascript" src="./js/plugins/jvectormap/vectormap-script.js"></script>
+
+
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+
+<!--<script type="text/javascript" src="js/timeclock.js"></script>-->
+<script src="./main.js"></script>
+<script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+<script type="text/javascript" src="./js/plugins.js"></script>
+<script src="./views/views_js/content_main_page.js"></script>
+<script src="./js/timeclock.js"></script>
+<script src="./views/views_js/timeclock2.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Toast Notification
+<script type="text/javascript">
+  // Toast Notification
+  $(window).load(function() {
+    setTimeout(function() {
+      Materialize.toast('<span>Hiya! I am a toast.</span>', 1500);
+    }, 1500);
+    setTimeout(function() {
+      Materialize.toast('<span>You can swipe me too!</span>', 3000);
+    }, 5000);
+    setTimeout(function() {
+      Materialize.toast('<span>You have new order.</span><a class="btn-flat yellow-text" href="#">Read<a>', 3000);
+    }, 15000);
+  });
+</script>   -->
+
+
+
+ <!-- Compiled and minified JavaScript -->
+
+
+
+</body>
+
+
+
+</html>

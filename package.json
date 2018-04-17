@@ -1,0 +1,81 @@
+{
+  "name": "ampa-app",
+  "productName": "ampa-app",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint src --color"
+  },
+  "keywords": [],
+  "author": "pedrodavim",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "yarn"
+      },
+      "electronWinstallerConfig": {
+        "name": "ampa_app"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "ampaapp"
+      }
+    }
+  },
+  "dependencies": {
+    "@angular-devkit/core": "^0.5.6",
+    "@angular/core": "^6.0.0-rc.5",
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9",
+    "angularfire2": "^5.0.0-rc.6.0",
+    "electron": "^1.8.4",
+    "electron-angular": "0.0.28",
+    "electron-compile": "^6.4.2",
+    "electron-reload": "^1.2.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "firebase": "^4.12.1",
+    "jquery-sparkline": "^2.4.0",
+    "ngx-electron": "^1.0.4",
+    "rxjs": "^6.0.0-uncanny-rc.7",
+    "uikit": "^3.0.0-beta.42",
+    "xel": "0.0.130",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.0",
+    "electron-prebuilt-compile": "1.8.4",
+    "electron-rebuild": "^1.7.3",
+    "eslint": "^3",
+    "eslint-config-airbnb": "^15",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^5",
+    "eslint-plugin-react": "^7"
+  }
+}
